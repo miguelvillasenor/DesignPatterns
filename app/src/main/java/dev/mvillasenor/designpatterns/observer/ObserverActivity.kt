@@ -12,7 +12,6 @@ class ObserverActivity : AppCompatActivity(R.layout.activity_observer) {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
         setUpView()
         observeState()
     }

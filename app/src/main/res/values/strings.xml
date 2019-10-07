@@ -1,6 +1,11 @@
 <resources>
     <string name="app_name">DesignPatterns</string>
     <string name="observer">Observer</string>
+    <string name="pubsub">Pub - Sub</string>
     <string name="set_state">Set State</string>
     <string name="initial_state">Initial state</string>
+
+    <string name="state_unknown">Unknown connection state</string>
+    <string name="state_connected">Connected</string>
+    <string name="state_disconnected">Disconnected</string>
 </resources>
