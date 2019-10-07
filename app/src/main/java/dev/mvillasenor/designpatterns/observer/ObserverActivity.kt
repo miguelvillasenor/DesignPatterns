@@ -18,13 +18,13 @@ class ObserverActivity : AppCompatActivity(R.layout.activity_observer) {
 
     private fun observeState() {
         subject.viewState.observe(this, Observer {
-            state.text = it
+            // HANDLE VIEW UPDATE
         })
     }
 
     private fun setUpView() {
         setState.setOnClickListener {
-            subject.setNewState(newState.text.toString())
+            // SEND INFO TO VIEW STATE
         }
     }
 }

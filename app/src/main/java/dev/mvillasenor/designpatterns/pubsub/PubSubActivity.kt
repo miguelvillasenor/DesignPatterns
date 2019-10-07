@@ -29,24 +29,18 @@ class PubSubActivity : AppCompatActivity(R.layout.activity_pubsub) {
     }
 
     private fun registerReceiver() {
-        val filter = IntentFilter()
-        filter.addAction(STATE_ACTION)
-        registerReceiver(broadcastReceiver, filter)
+        // 1. Create filter
+        // 2. Register receiver
     }
 
     private fun registerNetworkReceiver() {
-        val filter = IntentFilter()
-        filter.addAction(CONNECTIVITY_ACTION)
-        registerReceiver(networkReceiver, filter)
+        // 1. Create filter
+        // 2. Register receiver
     }
 
     private fun setUpView() {
         setState.setOnClickListener {
-            Intent().apply {
-                action = STATE_ACTION
-                putExtra(STATE_VALUE, newState.text.toString())
-                sendBroadcast(this)
-            }
+            // Create Intent and send broadcast
         }
     }
 
