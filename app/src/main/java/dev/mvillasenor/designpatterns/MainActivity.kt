@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import dev.mvillasenor.designpatterns.adapter.AdapterActivity
 import dev.mvillasenor.designpatterns.observer.ObserverActivity
 import dev.mvillasenor.designpatterns.pubsub.PubSubActivity
 import kotlinx.android.synthetic.main.activity_main.*
@@ -16,6 +17,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 
     observer.setOnClickListener(this)
     pubsub.setOnClickListener(this)
+    adapter.setOnClickListener(this)
   }
 
   override fun onClick(view: View?)  {
@@ -24,6 +26,9 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         startActivity(it)
       }
       pubsub -> Intent(this, PubSubActivity::class.java).also {
+        startActivity(it)
+      }
+      adapter -> Intent(this, AdapterActivity::class.java).also {
         startActivity(it)
       }
     }
